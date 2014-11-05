@@ -4,7 +4,7 @@ compiler:
   - clang
 
 install:
-  sudo apt-get install --force-yes --yes libboost1.54-all-dev
+  sudo apt-cache search libboost
 
 script:
   mkdir debug &&
