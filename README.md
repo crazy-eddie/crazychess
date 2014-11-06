@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/crazy-eddie/crazychess.png?label=ready&title=Ready)](https://waffle.io/crazy-eddie/crazychess)
 Build status: [![Build Status](https://travis-ci.org/crazy-eddie/crazychess.svg?branch=master)](https://travis-ci.org/crazy-eddie/crazychess)
 
 This is going to be a chess program used in the Sane C++ blog to discuss software
