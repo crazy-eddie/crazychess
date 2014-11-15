@@ -21,7 +21,7 @@ enum struct castling
 
 struct position
 {
-    position() {}
+    position();
 
     color side_to_move() const { return color::white; }
 
@@ -35,19 +35,12 @@ struct position
 
     bool en_passant() const { return false; }
 
-    board const& piece_placement() const
-    {
-        static auto b = board{ piece::r, piece::n, piece::b, piece::q, piece::k, piece::b, piece::n, piece::r
-                             , piece::p, piece::p, piece::p, piece::p, piece::p, piece::p, piece::p, piece::p
-                             , piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e
-                             , piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e
-                             , piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e
-                             , piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e, piece::e
-                             , piece::P, piece::P, piece::P, piece::P, piece::P, piece::P, piece::P, piece::P
-                             , piece::R, piece::N, piece::B, piece::Q, piece::K, piece::B, piece::N, piece::R };
+    board const& piece_placement() const;
 
-        return b;
-    }
+    static position from_fen(std::string const& fen);
+
+private:
+    board layout;
 };
 
 

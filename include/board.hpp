@@ -17,6 +17,7 @@ enum struct piece
   , white_king
   , black_pawn
   , black_rook
+  , black_knight
   , black_bishop
   , black_queen
   , black_king

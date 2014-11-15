@@ -18,4 +18,4 @@ function(add_boost_test name)
 endfunction()
 
 add_boost_test(board_test board.cpp)
-add_boost_test(position_test position.cpp)
+add_boost_test(position_test position.cpp ${CMAKE_SOURCE_DIR}/src/position.cpp)

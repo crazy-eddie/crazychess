@@ -39,3 +39,18 @@ BOOST_AUTO_TEST_CASE(default_position)
     BOOST_CHECK_EQUAL( quick_board_string(pos.piece_placement())
                      , "rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR");
 }
+
+BOOST_AUTO_TEST_CASE(position_from_good_fen)
+{
+    auto pos = crazychess::position::from_fen("rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR b Kkq c3 6 3");
+
+    BOOST_CHECK_EQUAL( quick_board_string(pos.piece_placement())
+                     , "rnbqkbnrpppp ppp            p                   PPPPPPPPRNBQKBNR");
+    //BOOST_CHECK(pos.side_to_move() == crazychess::color::black);
+}
+
+#if 0
+BOOST_AUTO_TEST_CASE(bad_fen)
+{
+}
+#endif
