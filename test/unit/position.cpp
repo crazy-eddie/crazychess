@@ -4,6 +4,18 @@
 
 #include <position.hpp>
 
+std::string quick_board_string(crazychess::board const& board)
+{
+    return std::accumulate( std::begin(board), std::end(board)
+                          , std::string()
+                          , [](std::string str, crazychess::piece p)
+                            {
+                                constexpr auto pc = " PRNBQKprnbqk";
+                                str.push_back(pc[static_cast<int>(p)]);
+                                return str;
+                            });
+}
+
 BOOST_AUTO_TEST_CASE(default_position)
 {
     // default to startposition
@@ -20,4 +32,7 @@ BOOST_AUTO_TEST_CASE(default_position)
     BOOST_CHECK_EQUAL(pos.current_move(), 1);
 
     BOOST_CHECK(!pos.en_passant());
+
+    BOOST_CHECK_EQUAL( quick_board_string(pos.piece_placement())
+                     , "rnbqkbnrpppppppp                                PPPPPPPPRNBQKBNR");
 }

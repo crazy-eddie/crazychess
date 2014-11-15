@@ -20,6 +20,10 @@ enum struct piece
   , black_bishop
   , black_queen
   , black_king
+
+  , e = 0
+  , P, R, N, B, Q, K
+  , p, r, n, b, q, k
 };
 using pieces = piece;
 
