@@ -39,11 +39,11 @@ BOOST_AUTO_TEST_CASE(starting)
     , "+-+-+-+-+-+-+-+-+"
     , "|p|p|p|p|p|p|p|p|"
     , "+-+-+-+-+-+-+-+-+"
-    , "| | | | | | | | |"
-    , "+-+-+-+-+-+-+-+-+"
-    , "| | | | | | | | |"
-    , "+-+-+-+-+-+-+-+-+"
-    , "| | | | | | | | |"
+    , "| | | | | | | | |    Color to move: White"
+    , "+-+-+-+-+-+-+-+-+    Castling availability: KQkq"
+    , "| | | | | | | | |    En passant sq: --"
+    , "+-+-+-+-+-+-+-+-+    Half-moves: 0"
+    , "| | | | | | | | |    Move number: 1"
     , "+-+-+-+-+-+-+-+-+"
     , "| | | | | | | | |"
     , "+-+-+-+-+-+-+-+-+"
@@ -59,7 +59,7 @@ BOOST_AUTO_TEST_CASE(starting)
 
 BOOST_AUTO_TEST_CASE(notstart)
 {
-    auto fen = "rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+    auto fen = "rnbqkbnr/pppp1ppp/8/4p3/8/8/PPPPPPPP/RNBQKBNR b Kkq c3 6 3";
 
     std::vector<std::string> expected
     {
@@ -68,11 +68,11 @@ BOOST_AUTO_TEST_CASE(notstart)
     , "+-+-+-+-+-+-+-+-+"
     , "|p|p|p|p| |p|p|p|"
     , "+-+-+-+-+-+-+-+-+"
-    , "| | | | | | | | |"
-    , "+-+-+-+-+-+-+-+-+"
-    , "| | | | |p| | | |"
-    , "+-+-+-+-+-+-+-+-+"
-    , "| | | | | | | | |"
+    , "| | | | | | | | |    Color to move: Black"
+    , "+-+-+-+-+-+-+-+-+    Castling availability: Kkq"
+    , "| | | | |p| | | |    En passant sq: c3"
+    , "+-+-+-+-+-+-+-+-+    Half-moves: 6"
+    , "| | | | | | | | |    Move number: 3"
     , "+-+-+-+-+-+-+-+-+"
     , "| | | | | | | | |"
     , "+-+-+-+-+-+-+-+-+"
