@@ -1,8 +1,6 @@
 #include <iostream>
 #include <unistd.h>
 
-// blah blah
-
 int main(int argc, char ** argv)
 {
     std::cout << "+-+-+-+-+-+-+-+-+\n"
