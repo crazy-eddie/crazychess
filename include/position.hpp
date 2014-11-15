@@ -5,8 +5,7 @@
 
 #include <boost/optional.hpp>
 
-namespace crazychess
-{
+namespace crazychess {
 
 enum struct color
 {
@@ -76,6 +75,6 @@ private:
 };
 
 
-}
+} // namespace crazychess
 
 #endif

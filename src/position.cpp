@@ -2,8 +2,7 @@
 
 #include <boost/tokenizer.hpp>
 
-namespace crazychess
-{
+namespace crazychess {
 
 namespace {
 
@@ -59,7 +58,9 @@ board parse_board(T const& str)
     return result;
 }
 
-}
+} // anon namespace
+
+
 position position::from_fen(std::string const& fen)
 {
     auto result = position{};
@@ -140,4 +141,4 @@ board const& position::piece_placement() const
     return layout;
 }
 
-}
+} // namespace crazychess

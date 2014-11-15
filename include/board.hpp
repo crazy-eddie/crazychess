@@ -3,8 +3,7 @@
 
 #include <array>
 
-namespace crazychess
-{
+namespace crazychess {
 
 enum struct piece
 {
@@ -26,6 +25,6 @@ using pieces = piece;
 
 using board = std::array<piece, 64>;
 
-}
+} // namespace crazychess
 
 #endif
