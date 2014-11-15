@@ -4,7 +4,7 @@ find_package(Boost COMPONENTS unit_test_framework)
 add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND})
 add_custom_target(tests)
 
-include_directories(${Boost_INCLUDE_DIR})
+include_directories(${Boost_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/include)
 
 function(add_boost_test name)
   add_executable(${name} EXCLUDE_FROM_ALL ${ARGN})
@@ -17,4 +17,4 @@ function(add_boost_test name)
   add_dependencies(tests ${name})
 endfunction()
 
-add_boost_test(blah blah.cpp)
+add_boost_test(board_test board.cpp)
