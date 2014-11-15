@@ -6,14 +6,17 @@
 
 std::string quick_board_string(crazychess::board const& board)
 {
-    return std::accumulate( std::begin(board), std::end(board)
-                          , std::string()
-                          , [](std::string str, crazychess::piece p)
-                            {
-                                constexpr auto pc = " PRNBQKprnbqk";
-                                str.push_back(pc[static_cast<int>(p)]);
-                                return str;
-                            });
+    auto result = std::string(64, ' ');
+
+    std::transform( std::begin(board), std::end(board)
+                  , std::begin(result)
+                  , [](crazychess::piece p)
+                    {
+                        constexpr auto pc = " PRNBQKprnbqk";
+                        return pc[static_cast<int>(p)];
+                    } );
+
+    return result;
 }
 
 BOOST_AUTO_TEST_CASE(default_position)
