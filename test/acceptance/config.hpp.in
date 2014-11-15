@@ -1,0 +1,9 @@
+#ifndef CONFIG_HPP
+#define CONFIG_HPP
+
+#include <string>
+
+//constexpr char const src_location[] = "@CMAKE_BINARY_DIR@/src/"
+constexpr char const board_program[] = "@CMAKE_BINARY_DIR@/src/board";
+
+#endif
